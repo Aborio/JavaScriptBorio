@@ -1,0 +1,30 @@
+.nav{
+    justify-content: end;
+}
+.nav a{
+    color: grey;
+}
+.carr{
+    display: flex;
+    top: 100px;
+    left: 350px;
+    width: 600px;
+    height: 500px;
+}
+.img{
+    width: 50px;
+    display: row;
+    position: relative;
+    left: 550px;
+
+}
+.derechos{
+    position: relative;
+    top: 110px;
+    font-weight: bolder;
+}
+
+footer{
+    position:relative;
+    top: 100px;
+}
