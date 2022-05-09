@@ -1,8 +1,7 @@
 // class Producto{
-//     constructor(nombre, precio, cantidadStock){
+//     constructor(nombre, precio){
 //         this.nombre = nombre;
-//         this.precio = precio;
-//         this.cantidadStock = cantidadStock;
+//         this.precio = parseInt(precio);
 //         this.stock = true;
 //         this.vendido = false;
 //     }
@@ -18,40 +17,40 @@
 //         this.vendido = true;
 //     }
 // }
+// let productos = [];
+// let i = 0
+// while (i < 10){
+//     i = new Producto(prompt("Coloque el producto"), prompt("Coloque el precio"));
+
+//     productos = [i];
+// }
 
 
-// let producto1 = new Producto("Yerbero", 20 , 10);
 
-// console.log(producto1.nombre);
-// producto1.stocki();
-// producto1.vender()
+// let nombre = prompt("Desea ejecutar?");
+// if (nombre === "y"){
+//     alert ("correct");
+// }else if(nombre === "Y"){
+//     alert("correct");
+// }else{
+//     alert("Incorrecto")
 
+ function protesta(){
+     console.log("Me salio bien creo yo");
+ }
+ function protesta2(){
+     console.log("me salio mal");
+ }
 
+let boton = document.getElementById("boton");
+// boton.addEventListener("click", protesta);
 
-
-class Cuentas{
-    constructor(usuario, contrasena, dateBird,email){
-        this.usuario = usuario;
-        this.contrasena = contrasena;
-        this.dateBird = dateBird;
-        this.email = email;
-    }
-
-
-    
-    iniciarSesion(usuario,contraseña){
-        usuario = prompt("Ingrese el Usuario:")
-        contraseña = prompt("Ingrese contraseña")
-        if ((usuario == "Usuario") && (contraseña === "Contraseña")){
-            alert("Bienvenido "+ usuario)
-        }else{
-            alert("Usuario o contraseña erroneos")
-        }
-    }
+let func = prompt("evento") 
+if(func === "click"){
+    boton.addEventListener("click", protesta);
+}else{
+    boton.addEventListener("dblclick", protesta2);
 }
-
-
-
 
 
 

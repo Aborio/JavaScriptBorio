@@ -38,8 +38,20 @@ const compra2 = [productos[3], productos[2]];
 const total1 = compra1.reduce((nom,el) => nom + el.precio, 0);
 const total2 = compra2.reduce((nom,el) => nom + el.precio, 0);
 
-console.log(total1);
-console.log(total2);
+
+for (const producto of productos){
+    let contenedor = document.createElement("div");
+    contenedor.addEventListener("click", carrito);
+    contenedor.innerHTML=`<h1>Producto: ${producto.nombre} </h1>
+                            <p>Precio: ${producto.precio} </p>`;
+    document.body.appendChild(contenedor) ;                       
+
+}
+function carrito(){
+    let total = productos.reduce((nom,el) => nom + el.precio, 0);
+    console.log(total);
+}
+
 
 
 
