@@ -35,22 +35,46 @@
 // }else{
 //     alert("Incorrecto")
 
- function protesta(){
-     console.log("Me salio bien creo yo");
- }
- function protesta2(){
-     console.log("me salio mal");
- }
+//  function protesta(){
+//      console.log("Me salio bien creo yo");
+//  }
+//  function protesta2(){
+//      console.log("me salio mal");
+//  }
 
-let boton = document.getElementById("boton");
-// boton.addEventListener("click", protesta);
+// let boton = document.getElementById("boton");
+// // boton.addEventListener("click", protesta);
 
-let func = prompt("evento") 
-if(func === "click"){
-    boton.addEventListener("click", protesta);
-}else{
-    boton.addEventListener("dblclick", protesta2);
+// let func = prompt("evento") 
+// if(func === "click"){
+//     boton.addEventListener("click", protesta);
+// }else{
+//     boton.addEventListener("dblclick", protesta2);
+// }
+
+
+
+// const Entrada = () => {
+//     let solici = prompt("coloque un valor");
+//     return alert((solici));
+// }
+
+// Entrada()
+
+// const procesamiento = (valor) =>{
+//     return ("la entrada es "+valor)
+// }
+
+// procesamiento(5)
+
+
+
+const redo = (numero) =>{
+    return Math.round(numero)
+
 }
+
+console.log(redo(2.2));
 
 
 
