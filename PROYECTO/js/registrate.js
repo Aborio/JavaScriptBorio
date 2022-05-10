@@ -18,6 +18,7 @@ usuario1.addEventListener("submit", validarFormulario);
 
 
 
+
 // // alert(usuarios);  // Si quiero ponerlo como alerta, solo me arroja "Object Object" Cual podria ser el error?
  // console.log(usuarios); Si quiero ponerlo asi, me funciona, ya que en consola del HTML me arroja los datos correctamente.
 
