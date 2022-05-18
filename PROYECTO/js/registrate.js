@@ -8,13 +8,25 @@ class Registrate{
     
 }
 
-function validarFormulario(e){
-    e.preventDefault();
-    console.log("Bienvenido " + e.target.children[1].value);    
+
+// document.getElementById("reg").addEventListener("click", registrar);
+
+
+function registrar(){
+    // e.preventDefault();
+    let NuevoUsuario = [];
+    let rUsuario = document.getElementsByClassName("user").value;
+    let rContra = document.getElementsByClassName("contra").value;
+    let rEmail = document.getElementsByClassName("email").value;
+
+    
+    // console.log(rUsuario);
+    // console.log(rContra);
+    // console.log(rEmail);
+    NuevoUsuario.push(rUsuario,rContra,rEmail);
+    console.log(NuevoUsuario);
 }
-const usuarios = [];
-let usuario1 = document.getElementById("reg");
-usuario1.addEventListener("submit", validarFormulario);
+
 
 
 

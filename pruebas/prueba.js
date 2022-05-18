@@ -68,14 +68,36 @@
 // procesamiento(5)
 
 
+// class Cliente{
+//     constructor(nombre, presupuesto, numeroTelefono){
+//         this.nombre = nombre;
+//         this.presupuesto = parseInt(presupuesto);
+//         this.numeroTelefono = parseInt(numeroTelefono);
+//         this.descuento = false;
+//     }
 
-const redo = (numero) =>{
-    return Math.round(numero)
+//     obtieneDescuento (){
+//         this.descuento = true;
+//     }
 
+//     transferirDinero(valor){
+//         valor = parseIng(prompt("coloque un numero:"));
+//         if ((valor > 0) && (valor < presupuesto)) {
+
+//         }
+//     }
+// }
+
+
+let contenedor = document.getElementById("reg");
+    contenedor.innerHTML=`
+    <p>Ingrese usuario</p><input type="text"/>
+        <p>Ingrese contraseña</p><input type="text number"/>
+        <p>Ingrese E-mail</p><input type="text"/>
+        <input onclick="validarFormulario()" type="submit" value="Enviar"/>`
+
+
+function validarFormulario(e){
+    e.preventDefault();
+    console.log("Bienvenido " + e.target.children[1].value);    
 }
-
-console.log(redo(2.2));
-
-
-
-
