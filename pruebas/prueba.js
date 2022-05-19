@@ -91,13 +91,27 @@
 
 let contenedor = document.getElementById("reg");
     contenedor.innerHTML=`
-    <p>Ingrese usuario</p><input type="text"/>
-        <p>Ingrese contraseña</p><input type="text number"/>
-        <p>Ingrese E-mail</p><input type="text"/>
-        <input onclick="validarFormulario()" type="submit" value="Enviar"/>`
+    <input type="text" name="Usuario" class="user" placeholder="Digite el usuario">
+        <input type="text" name="Usuario" class="contra" placeholder="Digite la Contraseña">
+        <input type="text" name="Usuario" class="email" placeholder="Digite el email">
+        <button type="button" onclick="registrar()">Enviar</button>`
 
 
-function validarFormulario(e){
-    e.preventDefault();
-    console.log("Bienvenido " + e.target.children[1].value);    
+ function registrar(){
+     // e.preventDefault();
+    let NuevoUsuario = [];
+    let rUsuario = document.getElementsByClassName("user").value;
+    let rContra = document.getElementsByClassName("contra").value;
+    let rEmail = document.getElementsByClassName("email").value;
+        
+            
+    console.log(rUsuario);
+    console.log(rContra);
+    console.log(rEmail);
+    NuevoUsuario.push(rUsuario,rContra,rEmail);
+    console.log(NuevoUsuario);
+
+    localStorage.setItem("usuarios", NuevoUsuario);
 }
+
+console.log(contenedor);

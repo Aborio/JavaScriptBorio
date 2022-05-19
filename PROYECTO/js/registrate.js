@@ -25,6 +25,8 @@ function registrar(){
     // console.log(rEmail);
     NuevoUsuario.push(rUsuario,rContra,rEmail);
     console.log(NuevoUsuario);
+
+    localStorage.setItem("Usuarios", NuevoUsuario);
 }
 
 
