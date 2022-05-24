@@ -15,18 +15,21 @@ class Registrate{
 function registrar(){
     // e.preventDefault();
     let NuevoUsuario = [];
-    let rUsuario = document.getElementsByClassName("user").value;
-    let rContra = document.getElementsByClassName("contra").value;
-    let rEmail = document.getElementsByClassName("email").value;
+    let NuevaContra = [];
+    let rUsuario = document.getElementById("user").value;
+    let rContra = document.getElementById("contra").value;
+    let rEmail = document.getElementById("email").value;
 
     
     // console.log(rUsuario);
     // console.log(rContra);
     // console.log(rEmail);
     NuevoUsuario.push(rUsuario,rContra,rEmail);
+    NuevaContra.push(rContra);
     console.log(NuevoUsuario);
 
     localStorage.setItem("Usuarios", NuevoUsuario);
+    localStorage.setItem("Contraseñas", NuevaContra);
 }
 
 
