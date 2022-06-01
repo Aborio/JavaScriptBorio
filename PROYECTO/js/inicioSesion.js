@@ -1,27 +1,28 @@
 
 
 
-function iniciarSesion(){
-    let usuario = sessionStorage.getItem("Usuarios");
-    let contraseña = sessionStorage.getItem("Contraseñas");
-    let sUsuario = document.getElementById("Suser")
-    let sContraseña = document.getElementById("Sconra");
+function iniciarSesion() {
 
-
-    sUsuario === usuario && sContraseña === contraseña ? Swal.fire({
-        position: 'top-end',
-        icon: 'success',
-        title: 'Sesion iniciada!',
-        showConfirmButton: false,
-        timer: 1500
-      }) : Swal.fire({
-        position: 'top-end',
-        icon: 'error',
-        title: 'Error en usuario y/o contraseña',
-        showConfirmButton: false,
-        timer: 1500
-      })
-  
+    let sUsuario = document.getElementById("Suser").value
+    console.log(sUsuario)
+    let sContrasena = document.getElementById("Scontra").value;
+    
+    const users = JSON.parse(localStorage.getItem("users")) || []; //si "users" no existe, entonces lo crea, sino devuelve el array de users
+    
+    for (let i = 0; i < users.length; i++) {
+        if (sUsuario == users[i].usuario && sContrasena == users[i].contrasena) {
+            Swal.fire(
+                'Bienvenido',
+                users[i].usuario,
+                'success'
+              )
+            return;
+        }
+    }
+    Swal.fire(
+        'Usuario y/o contraseña incorrecto',
+        'Intentelo devuelta',
+        'error'
+      );
+    return;
 }
-
-iniciarSesion();

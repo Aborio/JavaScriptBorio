@@ -89,29 +89,51 @@
 // }
 
 
-let contenedor = document.getElementById("reg");
-    contenedor.innerHTML=`
-    <input type="text" name="Usuario" class="user" placeholder="Digite el usuario">
-        <input type="text" name="Usuario" class="contra" placeholder="Digite la Contraseña">
-        <input type="text" name="Usuario" class="email" placeholder="Digite el email">
-        <button type="button" onclick="registrar()">Enviar</button>`
+// let contenedor = document.getElementById("reg");
+//     contenedor.innerHTML=`
+//     <input type="text" name="Usuario" class="user" placeholder="Digite el usuario">
+//         <input type="text" name="Usuario" class="contra" placeholder="Digite la Contraseña">
+//         <input type="text" name="Usuario" class="email" placeholder="Digite el email">
+//         <button type="button" onclick="registrar()">Enviar</button>`
 
 
- function registrar(){
-     // e.preventDefault();
-    let NuevoUsuario = [];
-    let rUsuario = document.getElementsByClassName("user").value;
-    let rContra = document.getElementsByClassName("contra").value;
-    let rEmail = document.getElementsByClassName("email").value;
+//  function registrar(){
+//      // e.preventDefault();
+//     let NuevoUsuario = [];
+//     let rUsuario = document.getElementsByClassName("user").value;
+//     let rContra = document.getElementsByClassName("contra").value;
+//     let rEmail = document.getElementsByClassName("email").value;
         
             
-    console.log(rUsuario);
-    console.log(rContra);
-    console.log(rEmail);
-    NuevoUsuario.push(rUsuario,rContra,rEmail);
-    console.log(NuevoUsuario);
+//     console.log(rUsuario);
+//     console.log(rContra);
+//     console.log(rEmail);
+//     NuevoUsuario.push(rUsuario,rContra,rEmail);
+//     console.log(NuevoUsuario);
 
-    localStorage.setItem("usuarios", NuevoUsuario);
-}
+//     localStorage.setItem("usuarios", NuevoUsuario);
+// }
 
-console.log(contenedor);
+// console.log(contenedor);
+
+
+// const eventoFuturo = (res) => {
+//     return new Promise ((resolve,reject) => {
+//         if (res === true){
+//             resolve("promesa resuelta")
+//         }else{
+//             reject("promesa inre")
+//         }
+//     })
+// }
+
+// console.log(eventoFuturo(true));
+// console.log(eventoFuturo(false));
+
+
+
+let listado = document.getElementById("lista");
+fetch("https://www.hebcal.com/home/developer-apis")
+.then(response => response.json())
+.then(datos => console.log(datos));
+
