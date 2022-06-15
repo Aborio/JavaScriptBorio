@@ -4,15 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <title>Registrate!</title>
 </head>
 <body>
-    <form id="sas">
-        <input type="text" name="Usuario" id="user" placeholder="Digite el usuario">
-        <input type="text" name="Usuario" id="contra" placeholder="Digite la Contraseña">
-        <input type="text" name="Usuario" id="email" placeholder="Digite el email">
-        <button type="button" onclick="validarEmail();">Enviar</button>
+    <form>
+        <fieldset>
+            <legend>Registrarse</legend>
+            <div class="col-12">
+                <label class="col-2" for="firstName">Usuario</label>
+                <input class="col-8" type="text" id="user" name="firstname" placeholder="Por favor, coloque su Usuario."required>
+            </div>
+            <div class="col-12">
+                <label class="col-2" for="lastName">Contraseña</label>
+                <input class="col-8" type="password" id="contra" name="lastName" placeholder="Por favor, coloque su Contraseña."required>
+            </div>
+            <div class="col-12">
+                <label class="col-2" for="phoneNumber">Telefono</label>
+                <input class="col-8" type="text" id="phoneNumber" name="phoneNumber" placeholder="Por favor, coloque su Telefono."required>
+            </div>
+            <div class="col-12">
+                <label class="col-2" for="lastName">E-mail</label>
+                <input class="col-8" type="email" id="email" name="email" placeholder="Por favor, coloque su E-mail."required>
+            </div>
+        </fieldset>
+        <input class="btn-send" type="button" onclick="registrar();" value="Enviar">
     </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../js/registrate.js"></script>
 </body>

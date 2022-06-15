@@ -24,23 +24,10 @@ function registrar(){
     localStorage.setItem("users", JSON.stringify(users)); //guarda el array "users" en el localStorage
     Swal.fire(`${rUsuario} registrado con exito`)  // muestra un mensaje de registro exitoso
     }
-    // setTimeout(() => {window.location.href = "http://127.0.0.1:5500/PROYECTO/pages/iniciarSesion.html"},2500); //En produccion
+    setTimeout(() => {window.location.href = "http://127.0.0.1:5500/PROYECTO/pages/iniciarSesion.html"},2500); //En produccion
     
 }
 
-
-
- const validarEmail = () =>{
-    const usersE = JSON.parse(localStorage.getItem("users"));
-    let rEmail = document.getElementById("email").value;
-    for (let i = 0; i < usersE.length; i++) {
-        if (rEmail === usersE[i].email){
-            alert("Email repetido, utilice otro");
-        }else{
-            return registrar();
-        }
-    }
-}
 
 
 

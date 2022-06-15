@@ -132,8 +132,7 @@
 
 
 
-let listado = document.getElementById("lista");
-fetch("https://www.hebcal.com/home/developer-apis")
-.then(response => response.json())
-.then(datos => console.log(datos));
-
+// let listado = document.getElementById("lista");
+// fetch("https://www.hebcal.com/home/developer-apis")
+// .then(response => response.json())
+// .then(datos => console.log(datos)
