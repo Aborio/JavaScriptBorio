@@ -38,25 +38,40 @@ let productos = [];
                            
 //     document.body.appendChild(contenedor);
 // }
-
+let carrito = [];
 const Carrito = (id) => {
     let producto = productos.find(producto => producto.id === id);
     let form = producto.nombre;
         alert("agregaste " + form);
-  
+    carrito.push({
+        id : producto.id,
+        nombre : producto.nombre,
+        precio : producto.precio,
+        })
+    const carriton = JSON.parse(localStorage.getItem("carrito")) || [];
+    carriton.push(carrito);
+    localStorage.setItem("carrito", JSON.stringify(carriton));
+    console.log(carrito);
+
+
+
+
+
+
+
+
+
 }
 
-let bot = document.getElementById("boton");
 
 const traerDatosJson = async () =>{
     let response = await fetch("../Apis/productos.json");
     let data = await response.json();
     productos = data;
    
-    console.log(productos);
 
     for (const producto of productos){
-        let contenedor = document.createElement("productos");
+        let contenedor = document.createElement("div1");
         contenedor.innerHTML=`
         <section class="py-5">
             <div class="container px-4 px-lg-5 mt-5">
@@ -81,8 +96,56 @@ const traerDatosJson = async () =>{
                     </div>
                 </div>
             </div>
+            
         </section>`;
                                
         document.body.appendChild(contenedor);
+    }
+}
+
+
+const show = () =>{
+
+    const carito = JSON.parse(localStorage.getItem("carrito")) || [];
+    for (const carito of carrito){
+
+        
+        let contenedor1 = document.createElement("div2");
+        contenedor1.innerHTML=`<div class="modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Cartera</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">Carrito</button>
+            </div>
+            <div class="modal-body">
+            <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Precio</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">${carrito.id}</th>
+                <td>${carrito.nombre}</td>
+                <td>${carrito.precio}</td>
+              </tr>
+            </tbody>
+          </table>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+        
+        `
+        document.body.appendChild(contenedor1);
     }
 }
