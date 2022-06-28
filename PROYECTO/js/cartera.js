@@ -48,10 +48,9 @@ const Carrito = (id) => {
         nombre : producto.nombre,
         precio : producto.precio,
         })
-    const carriton = JSON.parse(localStorage.getItem("carrito")) || [];
-    carriton.push(carrito);
-    localStorage.setItem("carrito", JSON.stringify(carriton));
-    console.log(carrito);
+    // const carriton = JSON.parse(localStorage.getItem("carrito")) || [];
+    // carriton.push(carrito);
+    localStorage.setItem("carrito", JSON.stringify(carrito));
 
 
 
