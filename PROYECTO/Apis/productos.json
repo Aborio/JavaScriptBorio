@@ -2,5 +2,9 @@
 {"id": 1, "nombre": "Matera","precio": 300, "imagen": "https://http2.mlstatic.com/D_NQ_NP_732063-MLA42345659528_062020-O.webp"},
 {"id": 2, "nombre": "Pantuflas","precio": 1000, "imagen": "https://http2.mlstatic.com/D_NQ_NP_907552-MLA45548121980_042021-W.webp"},
 {"id": 3, "nombre": "Termos","precio": 500, "imagen": "https://http2.mlstatic.com/D_NQ_NP_823713-MLA46192402341_052021-V.webp"},
-{"id": 4, "nombre": "Bombillas","precio": 2000, "imagen": "https://http2.mlstatic.com/D_NQ_NP_898479-MLA45731292464_042021-W.webp"}
+{"id": 4, "nombre": "Bombillas","precio": 2000, "imagen": "https://http2.mlstatic.com/D_NQ_NP_898479-MLA45731292464_042021-W.webp"},
+{"id": 5, "nombre": "Bombillas","precio": 2000, "imagen": "https://http2.mlstatic.com/D_NQ_NP_898479-MLA45731292464_042021-W.webp"},
+{"id": 6, "nombre": "Bombillas","precio": 2000, "imagen": "https://http2.mlstatic.com/D_NQ_NP_898479-MLA45731292464_042021-W.webp"},
+{"id": 7, "nombre": "Bombillas","precio": 2000, "imagen": "https://http2.mlstatic.com/D_NQ_NP_898479-MLA45731292464_042021-W.webp"}
+
 ]
